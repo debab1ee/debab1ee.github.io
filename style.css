@@ -345,3 +345,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .credits { font-size: 13px; opacity: .85; }
 .credits a { font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 .footer a:hover { color: var(--yellow); }
+
+/* Wide card (spans both columns) */
+.case-wide { grid-column: 1 / -1; }
+.case-wide .case-body p { color: var(--muted); }

@@ -58,7 +58,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261120">
   <script>
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
@@ -189,6 +189,23 @@
             </div>
           </article>
 
+          <article class="case case-wide c-pink" data-tags="ai backend">
+            <p class="case-meta">Many client apps</p>
+            <h3>AI chatbots that do real work</h3>
+            <div class="case-body">
+              <p>
+                I've built and upgraded a lot of chatbots inside client apps. Some just answer questions.
+                Others are wired into the app itself: one pulls live answers straight from a Postgres database,
+                another runs safe SQL commands so people can update records just by asking.
+              </p>
+              <p>
+                Depending on what the app needs, they reason through multi-step questions, search a company's
+                own documents (RAG), read images, or listen and talk back.
+              </p>
+            </div>
+            <ul class="tags"><li>OpenAI</li><li>Gemini</li><li>RAG</li><li>PostgreSQL</li><li>LangChain</li><li>NestJS</li></ul>
+          </article>
+
           <article class="case c-pink" data-tags="backend web">
             <img class="case-img" src="images/whatnot2eat-produce.webp" width="1000" height="560" loading="lazy" alt="Fresh fruit and vegetables stacked in a supermarket aisle">
             <p class="case-meta">The Food Intolerance Institute Australia</p>
@@ -220,10 +237,10 @@
             <p class="case-meta">Private client, 2025 to 2026</p>
             <h3>A talking avatar for a family-memory app</h3>
             <p class="case-summary">
-              Families can talk to an AI version of a parent, by voice or on video. One AI model decides what
-              to say and a separate avatar service says it, so the hard part was getting them to take turns
-              without talking over each other. I also built the pipeline that turned the parents' interview
-              videos into what the AI knows.
+              People can talk, by voice or on video, to AI avatars of real people they know, with that
+              person's personality and memories. One AI model decides what to say and a separate avatar
+              service says it, so the hard part was getting them to take turns without talking over each
+              other. I also built the pipeline that turns hours of recorded interviews into each avatar's memory.
             </p>
             <ul class="tags"><li>React Native</li><li>OpenAI Realtime</li><li>WebRTC</li><li>n8n</li><li>AWS</li></ul>
           </article>
@@ -242,8 +259,8 @@
           </article>
 
           <article class="case c-yellow" data-tags="web">
-            <p class="case-meta">Home inspections, since September 2025</p>
-            <h3>HDMK</h3>
+            <p class="case-meta">US client, since September 2025</p>
+            <h3>Pricing and quotes for a home-inspection company</h3>
             <p class="case-summary">
               I sit between this client and the developers. Their quote screen was charging the wrong prices
               because the handbook, the website and the pricing sheet all said different things. I tracked
@@ -264,16 +281,6 @@
             <ul class="tags"><li>SwiftUI</li><li>Firebase</li><li>Stripe</li></ul>
           </article>
 
-          <article class="case c-pink" data-tags="ai backend">
-            <p class="case-meta">Several client apps</p>
-            <h3>AI assistants inside other apps</h3>
-            <p class="case-summary">
-              In a work-management app, the assistant's totals didn't match the dashboard, because the model
-              only ever saw 20 rows at a time. I gave it proper counting tools and now the numbers agree. I've
-              built similar chat features for a wellness app and a city guide.
-            </p>
-            <ul class="tags"><li>NestJS</li><li>OpenAI</li><li>LangChain</li></ul>
-          </article>
         </div>
 
         <details class="more">
@@ -356,6 +363,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20261120"></script>
 </body>
 </html>
