@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Debakshi Bhattacharjee</title>
-  <meta name="description" content="Full-stack and mobile developer. I build AI chat assistants, booking and payment systems, and the apps around them.">
+  <meta name="description" content="Developer building AI that works in front of real customers, plus the apps and backends that go with it.">
   <meta property="og:title" content="Debakshi Bhattacharjee">
-  <meta property="og:description" content="Full-stack and mobile developer. AI chat assistants, booking and payment systems, iOS and React Native apps.">
+  <meta property="og:description" content="Developer building AI that works in front of real customers, plus the apps and backends that go with it.">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#fff8ec" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#10122b" media="(prefers-color-scheme: dark)">
@@ -30,7 +30,7 @@
       <nav aria-label="Primary">
         <ul class="nav-links">
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#tools">Tools</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#history">History</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -48,14 +48,13 @@
         <p class="hello">Hi, I'm</p>
         <h1>Debakshi Bhattacharjee</h1>
         <p class="role">
-          Full-stack and mobile developer. I build AI chat assistants,
-          booking and payment systems, n8n automations, and the apps around them.
+          I'm a developer. I build AI that has to work in front of real customers,
+          and the apps and backends that go with it.
         </p>
         <p class="intro">
-          For the past two years I've worked on client projects at Silversky Technology.
-          That includes a WhatsApp booking bot for a nightclub in Kuala Lumpur, a food-rating
-          platform in Australia, AI content tools for a real-estate company, and several iOS
-          and React Native apps. I also take freelance work.
+          I've spent the last two years on client work at Silversky Technology. Most of this year
+          went into a WhatsApp bot that takes table bookings for a nightclub in Kuala Lumpur.
+          I'm freelancing now, so if you have something like that in mind, I'd like to hear about it.
         </p>
         <div class="cta-row">
           <a class="btn btn-blue" href="mailto:theofficialdebakshi@gmail.com">Email me</a>
@@ -82,22 +81,29 @@
       </ul>
     </section>
 
-    <section class="section how" aria-labelledby="how-title">
+    <section class="section about" id="about" aria-labelledby="about-title">
       <div class="wrap">
-        <div class="section-head"><h2 id="how-title">How I work</h2></div>
-        <div class="how-grid">
-          <div class="how-card c-yellow">
-            <h3>I learn on the job, quickly</h3>
-            <p>I learned SwiftUI on a live client project and became its main iOS developer. Most of what I use, I picked up the same way: on real work, with a deadline.</p>
-          </div>
-          <div class="how-card c-pink">
-            <h3>I get into your business</h3>
-            <p>Nightclub table layouts, food categories, mortgage rates, shark species. I learn what you care about and why, because that's how the software ends up fitting.</p>
-          </div>
-          <div class="how-card c-blue">
-            <h3>I automate the repetitive parts</h3>
-            <p>I build n8n workflows with webhooks, schedules, AI steps and AWS. One turned about 16 GB of interview video into a knowledge base an AI can search.</p>
-          </div>
+        <div class="section-head"><h2 id="about-title">A bit about me</h2></div>
+        <div class="about-card">
+          <p>
+            In 2024 the company needed someone on an iOS app that had already passed through three
+            developers. I didn't know SwiftUI, so I spent six months teaching myself (222 practice
+            commits) and then took it over. I was its main developer for over two years.
+          </p>
+          <p>
+            That's how I've learned most things since. Meta's WhatsApp platform has a lot of rules and
+            very little support, so I read the docs, tested everything and built in safety checks.
+            GS1's barcode API had a hard rate limit and gaps in its documentation, so I probed it until
+            I knew how it behaved.
+          </p>
+          <p>
+            On most projects I'm also the one talking to the client. I'd rather ask a lot of questions
+            early, find out what the business actually needs, and build that.
+          </p>
+          <p>
+            When something is repetitive, I automate it, usually with n8n. One workflow took about 16 GB
+            of recorded interviews, transcribed them and loaded them into a knowledge base an AI could search.
+          </p>
         </div>
       </div>
     </section>
@@ -118,115 +124,124 @@
         <div class="cases">
           <article class="case case-feature" data-tags="ai backend web">
             <img class="case-img" src="images/madras-bar.webp" width="1600" height="720" loading="lazy" alt="A bar lit with pink, blue and yellow neon lightning bolts">
-            <p class="case-meta">Madras Club, Kuala Lumpur. March to November 2026</p>
-            <h3>Table booking for a nightclub, run through WhatsApp and Instagram</h3>
-            <p class="case-summary">
-              Guests book tables, pay deposits and report lost items by chatting with "Pooja",
-              an AI host. I built the WhatsApp side first and later took over most of the backend.
-            </p>
-            <ul class="case-points">
-              <li>Pooja runs on Gemini with 14 tools. I stopped her leaking context and promising things the club couldn't do, and added cancellations, retries and a handoff from Instagram to WhatsApp.</li>
-              <li>The iPay88 deposit flow checks signed callbacks and amounts, and a unique index stops two guests booking the same table.</li>
-              <li>I moved the backend from Supabase edge functions to NestJS with no downtime, and added rate limits, health checks and a deploy script that can roll back.</li>
-              <li>Complaints and lost-and-found reports are pulled out of free-form chat and each one is filed exactly once.</li>
-            </ul>
+            <p class="case-meta">Nightclub in Kuala Lumpur, March to November 2026</p>
+            <h3>Madras Club</h3>
+            <div class="case-body">
+              <p>
+                The club wanted guests to book tables on WhatsApp instead of calling. Now an AI host called
+                Pooja takes the booking, collects the deposit through iPay88 and writes up complaints and
+                lost property.
+              </p>
+              <p>
+                I started on the WhatsApp side in March and ended up running most of the backend. We looked
+                at third-party WhatsApp providers for a long time before building our own, because none of
+                them gave us the control we needed. A lot of my time went into making Pooja behave: early on
+                she leaked context and promised things the club couldn't do. I also moved the backend off
+                Supabase edge functions to cut costs, without taking anything down.
+              </p>
+            </div>
             <div class="case-foot">
               <p class="outcome"><b>115</b> bookings and <b>133</b> guests in the first two months</p>
-              <ul class="tags"><li>NestJS</li><li>Gemini</li><li>WhatsApp API</li><li>iPay88</li><li>React</li><li>AWS Lightsail</li></ul>
+              <ul class="tags"><li>NestJS</li><li>Gemini</li><li>WhatsApp API</li><li>iPay88</li><li>React</li></ul>
             </div>
           </article>
 
           <article class="case c-pink" data-tags="backend web">
             <img class="case-img" src="images/whatnot2eat-produce.webp" width="1000" height="560" loading="lazy" alt="Fresh fruit and vegetables stacked in a supermarket aisle">
             <p class="case-meta">The Food Intolerance Institute Australia</p>
-            <h3>WhatNot2Eat, a food-rating platform</h3>
+            <h3>WhatNot2Eat</h3>
             <p class="case-summary">
-              I led the backend and dealt with the client directly. I built the product and category APIs, spreadsheet import and the React admin panel.
+              A food-rating app. I led the backend and was the client's main contact. The tricky part was
+              switching barcode data to GS1 Australia's official API, which has a hard rate limit. I keep a
+              local copy of about 183,000 products that webhooks update, and staff approve changes before
+              they go live.
             </p>
-            <ul class="case-points">
-              <li>Moved 791 live products to the GS1 GPC taxonomy in a single transaction.</li>
-              <li>Switched barcode data to GS1 Australia, with a local copy of about 183k rows that webhooks keep up to date.</li>
-            </ul>
             <ul class="tags"><li>NestJS</li><li>PostgreSQL</li><li>GS1</li><li>React</li></ul>
           </article>
 
           <article class="case c-yellow" data-tags="ai backend">
             <img class="case-img" src="images/zenreai-house.webp" width="1000" height="560" loading="lazy" alt="A pink and blue two-storey house">
-            <p class="case-meta">ZenREAI, 2026</p>
-            <h3>Social posts and reels written by AI for a real-estate app</h3>
+            <p class="case-meta">Real estate, 2026</p>
+            <h3>ZenREAI</h3>
             <p class="case-summary">
-              A FastAPI service that writes captions and draws infographics for mortgage and property posts.
+              It writes social posts for mortgage and real-estate professionals. The client spotted wrong
+              and repeated market figures in some posts, so I stopped letting the AI handle numbers. Rates
+              now come from the Federal Reserve's FRED data, the maths runs in code, and every cited article
+              is checked to be recent and to contain the figure.
             </p>
-            <ul class="case-points">
-              <li>Interest rates come from the FRED API and the maths happens in code, so the model can't invent numbers. Cited articles are checked to be recent and to contain the figures.</li>
-              <li>A video pipeline using headless Chromium and ffmpeg, plus admin tools in NestJS.</li>
-            </ul>
-            <ul class="tags"><li>FastAPI</li><li>OpenAI</li><li>Gemini</li><li>S3</li><li>ffmpeg</li></ul>
+            <ul class="tags"><li>FastAPI</li><li>OpenAI</li><li>Gemini</li><li>ffmpeg</li></ul>
           </article>
 
           <article class="case c-blue" data-tags="ai mobile backend">
+            <img class="case-img" src="images/avatar-phone.webp" width="1000" height="560" loading="lazy" alt="A hand holding a phone with a woman's face filling the screen">
             <p class="case-meta">Private client, 2025 to 2026</p>
-            <h3>Voice and video chat with an AI avatar in a family-memory app</h3>
+            <h3>A talking avatar for a family-memory app</h3>
             <p class="case-summary">
-              Inside a React Native app, OpenAI Realtime does the thinking and a streaming avatar does the talking. Two WebRTC sessions take turns and shut down cleanly.
+              Families can talk to an AI version of a parent, by voice or on video. One AI model decides what
+              to say and a separate avatar service says it, so the hard part was getting them to take turns
+              without talking over each other. I also built the pipeline that turned the parents' interview
+              videos into what the AI knows.
             </p>
-            <ul class="case-points">
-              <li>An AWS and n8n pipeline turned about 16 to 18 GB of interview video into a searchable knowledge base in Pinecone.</li>
-              <li>A 3D talking character. I cut memory per room from 200–440 MB down to 70–100 MB so it runs on phones.</li>
-            </ul>
-            <ul class="tags"><li>React Native</li><li>OpenAI Realtime</li><li>WebRTC</li><li>AWS</li></ul>
+            <ul class="tags"><li>React Native</li><li>OpenAI Realtime</li><li>WebRTC</li><li>n8n</li><li>AWS</li></ul>
           </article>
 
           <article class="case c-pink" data-tags="ai backend">
             <img class="case-img" src="images/fish-ray.webp" width="1000" height="560" loading="lazy" alt="An eagle ray gliding through deep blue water">
-            <p class="case-meta">2025 to 2026</p>
-            <h3>Identifying sharks, rays and skates from a photo</h3>
+            <p class="case-meta">Marine species, 2025 to 2026</p>
+            <h3>Shark and ray identification</h3>
             <p class="case-summary">
-              A YOLO detector, background removal, embedding models and FAISS search behind a FastAPI endpoint, running in Docker on AWS.
+              Send a photo of a shark, ray or skate and get the species back. A lot of species look almost
+              identical, so the API doesn't just give one best guess. It gives a confidence score it can
+              stand behind, lists the close relatives, and turns away photos that aren't fish it knows.
+              The client has signed off on it.
             </p>
-            <ul class="case-points">
-              <li>The API reports how sure it is and rejects photos that aren't of the target species.</li>
-            </ul>
             <ul class="tags"><li>PyTorch</li><li>YOLO</li><li>FAISS</li><li>FastAPI</li></ul>
           </article>
 
           <article class="case c-yellow" data-tags="web">
-            <p class="case-meta">HDMK, since September 2025</p>
-            <h3>Delivery lead for a home-inspection company</h3>
+            <p class="case-meta">Home inspections, since September 2025</p>
+            <h3>HDMK</h3>
             <p class="case-summary">
-              I turn the client's requests into specs, guide the developers and test before release. I also build working demos for the team to reproduce in production, including a pricing engine, property lookups and a sales call script.
+              I sit between this client and the developers. Their quote screen was charging the wrong prices
+              because the handbook, the website and the pricing sheet all said different things. I tracked
+              down 14 open pricing questions, got the client to decide each one, and built a tested demo of
+              the pricing engine for the team to copy. That pricer is live now.
             </p>
             <ul class="tags"><li>Specs</li><li>Prototypes</li><li>GoHighLevel</li></ul>
           </article>
 
           <article class="case c-blue" data-tags="mobile">
-            <p class="case-meta">August 2024 to November 2026</p>
-            <h3>An iOS app for booking sessions with experts</h3>
+            <p class="case-meta">Marketplace, August 2024 to November 2026</p>
+            <h3>Expert booking app for iPhone</h3>
             <p class="case-summary">
-              I learned SwiftUI on this project and became its main iOS developer. I built booking and rescheduling that can't double-book, Stripe payments and refunds, chat, push notifications, and city groups with moderation.
+              People pay to book sessions with experts. This is the app I taught myself SwiftUI for. An
+              expert's slot is held before the customer pays, and overlapping sessions get rejected. I
+              built that, plus the Stripe payments and refunds.
             </p>
             <ul class="tags"><li>SwiftUI</li><li>Firebase</li><li>Stripe</li></ul>
           </article>
 
           <article class="case c-pink" data-tags="ai backend">
-            <p class="case-meta">Four client apps</p>
-            <h3>AI assistants that answer from live data</h3>
+            <p class="case-meta">Several client apps</p>
+            <h3>AI assistants inside other apps</h3>
             <p class="case-summary">
-              An assistant for a work-management app whose answers match the app's own dashboard. Also a wellness chatbot with weekly insights, an image generator that reports progress over sockets, and a LangChain bot that answers questions from a SQL database.
+              In a work-management app, the assistant's totals didn't match the dashboard, because the model
+              only ever saw 20 rows at a time. I gave it proper counting tools and now the numbers agree. I've
+              built similar chat features for a wellness app and a city guide.
             </p>
             <ul class="tags"><li>NestJS</li><li>OpenAI</li><li>LangChain</li></ul>
           </article>
         </div>
 
         <details class="more">
-          <summary>Smaller apps and experiments</summary>
+          <summary>Smaller things</summary>
           <ul class="more-list">
-            <li><b>Event app, built in two weeks.</b> AI face generation that still works offline, an external camera and CSV export.</li>
-            <li><b>Site photo log.</b> PDF reports, in-app purchase and image compression.</li>
-            <li><b>Visitor check-in kiosk.</b> A tablet app I built on my own.</li>
-            <li><b>App upkeep.</b> Android API 35 upgrades, iOS releases, Strava, ads and iPad support for several live apps.</li>
-            <li><b>Reel pipeline.</b> A Claude Code workflow with 177 tests that lets a marketing team make videos from raw footage.</li>
-            <li><b>Experiments.</b> Snore detection on the phone, WhatsApp login, face detection.</li>
+            <li><b>An event app in two weeks.</b> It generates AI portraits of visitors and keeps working when the internet drops.</li>
+            <li><b>A visitor check-in kiosk.</b> A tablet app I built on my own.</li>
+            <li><b>A site photo log</b> that turns photos into PDF reports.</li>
+            <li><b>Keeping live apps healthy:</b> Android upgrades, iOS releases, iPad support.</li>
+            <li><b>A reel-making workflow</b> in Claude Code, so the marketing team can cut videos without an editor.</li>
+            <li><b>Side experiments:</b> snore detection on a phone, and logging in with WhatsApp.</li>
           </ul>
         </details>
       </div>
@@ -254,14 +269,14 @@
             <span class="tl-when">Now</span>
             <div>
               <h3>Freelance developer</h3>
-              <p>Chatbots, booking and payment flows, and mobile apps for small businesses.</p>
+              <p>Mostly chatbots, automations and apps for small businesses.</p>
             </div>
           </li>
           <li>
             <span class="tl-when">2024 to 2026</span>
             <div>
               <h3>Software engineer at Silversky Technology</h3>
-              <p>I worked on client projects for businesses in Malaysia, Australia and the US, often as the main contact with the client.</p>
+              <p>Client projects for businesses in Malaysia, Australia and the US. On most of them I was also the person talking to the client.</p>
             </div>
           </li>
         </ol>
@@ -271,7 +286,7 @@
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="wrap contact-inner">
         <h2 id="contact-title">Get in touch</h2>
-        <p>If you need a chatbot, a booking system or an app, send me a message about what you have in mind.</p>
+        <p>Tell me what you're trying to build. A rough idea is fine.</p>
         <div class="cta-row">
           <a class="btn btn-ink" href="mailto:theofficialdebakshi@gmail.com">theofficialdebakshi@gmail.com</a>
           <a class="btn btn-outline" href="https://www.fiverr.com/sellers/debakshib13" target="_blank" rel="noopener">Fiverr</a>
@@ -290,7 +305,8 @@
       <span class="credits">Photos on Unsplash by
         <a href="https://unsplash.com/photos/VivdSIjrb4w" target="_blank" rel="noopener">Camilo Rueda López</a>,
         <a href="https://unsplash.com/photos/pRJhn4MbsMM" target="_blank" rel="noopener">Thomas Le</a>,
-        <a href="https://unsplash.com/photos/w0xNq-jWl6k" target="_blank" rel="noopener">Paul Bill</a> and
+        <a href="https://unsplash.com/photos/w0xNq-jWl6k" target="_blank" rel="noopener">Paul Bill</a>,
+        <a href="https://unsplash.com/photos/AK67v81mZaA" target="_blank" rel="noopener">Onur Binay</a> and
         <a href="https://unsplash.com/photos/vMMgHSGZUXA" target="_blank" rel="noopener">Nicolas</a></span>
       <a href="#top">Back to top</a>
     </div>

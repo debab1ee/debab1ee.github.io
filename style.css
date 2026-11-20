@@ -199,19 +199,24 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .chip:hover { background: var(--yellow-soft); }
 .chip.is-active { background: var(--yellow); color: #16173d; }
 
-/* ---------- How I work ---------- */
-.how { padding-bottom: 0; }
-.how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.how-card {
-  border: 2px solid var(--line); border-radius: var(--radius); padding: 24px;
-  box-shadow: 5px 5px 0 var(--shadow); color: #16173d;
+/* ---------- About ---------- */
+.about { padding-bottom: 0; }
+.about-card {
+  background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--yellow); padding: 32px 36px;
+  columns: 2; column-gap: 48px; font-size: 17.5px;
 }
-.how-card.c-yellow { background: var(--yellow); }
-.how-card.c-pink { background: var(--pink); }
-.how-card.c-blue { background: var(--blue); }
-.how-card h3 { font-family: var(--display); font-weight: 800; font-size: 23px; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 10px; }
-.how-card p { font-size: 15.5px; }
-@media (max-width: 860px) { .how-grid { grid-template-columns: 1fr; } }
+.about-card p { break-inside: avoid; margin-bottom: 16px; }
+.about-card p:first-child::first-letter {
+  float: left; font-family: var(--display); font-weight: 800; font-size: 58px; line-height: .9;
+  margin: 4px 10px 0 0; color: #16173d; background: var(--pink); border: 2px solid var(--line);
+  border-radius: 12px; padding: 6px 10px 8px;
+}
+@media (max-width: 860px) { .about-card { columns: 1; padding: 22px; } }
+
+.case-body { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 36px; max-width: none; }
+.case-feature .case-body p { color: #2a2c5c; font-size: 17px; }
+@media (max-width: 860px) { .case-body { grid-template-columns: 1fr; } }
 
 /* ---------- Project cards ---------- */
 .cases { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
