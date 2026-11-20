@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://debab1ee.github.io/sitemap.xml
